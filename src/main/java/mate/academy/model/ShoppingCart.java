@@ -4,16 +4,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.MapsId;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import java.util.List;
 
 @Entity
 public class ShoppingCart {
     @Id
     private long id;
-    @JoinColumn(name = "shopping_cart_id")
     @OneToMany
+    @JoinColumn(name = "shopping_cart_id")
     private List<Ticket> tickets;
     @OneToOne
     @MapsId
