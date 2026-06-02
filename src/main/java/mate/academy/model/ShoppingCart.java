@@ -6,9 +6,11 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.MapsId;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import java.util.List;
 
 @Entity
+@Table(name = "shopping_cart")
 public class ShoppingCart {
     @Id
     private long id;
